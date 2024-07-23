@@ -9,6 +9,13 @@ var argv = minimist(process.argv.slice(2))
 
 var command = argv._[0]
 
+if (argv['file'])
+{
+  var file = argv['file']
+  console.log(chalk.yellow('Opening file: ' + file))
+  hostile.setFile(file);
+}
+
 if (command === 'list' || command === 'ls') list()
 if (command === 'set') set(argv._[1], argv._[2])
 if (command === 'remove') remove(argv._[1])
