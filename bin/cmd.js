@@ -37,6 +37,8 @@ function help () {
       remove [domain]        Remove a domain from the hosts file
       load [file]            Load a set of host entries from a file
       unload [file]          Remove a set of host entries from a file
+      
+      optional --file parameter to all commands to allow for manipulating other hosts files in non standard locations
 
   */ }.toString().split(/\n/).slice(1, -1).join('\n'))
 }
